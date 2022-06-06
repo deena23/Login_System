@@ -1,0 +1,86 @@
+<section class="managermain">
+    <a  href="" routerLink="/home" class="homebtn">Home</a>
+<div class="crd">
+<div class="header">
+    <h6 class="h6" (click)="createtask()">Create Task</h6>
+    <h6 class="h6" (click)="assigntask()">Assign Task</h6>
+    <h6 class="h6" (click)="reviewtask()">Review Task</h6>
+</div>
+<div class="mainfunc">
+    <h1 style="color:#af3026">Welcome Home Manager</h1>
+    <div class="taskcreate" *ngIf="taskcreate">
+        <h1 class="h1">Create Task</h1>
+        <div class="div">
+            <label class="label">Project ID</label>
+            <select class="inputTag">
+                <option>-Select-</option>
+            </select>
+        </div>
+        <div class="div">
+            <label class="label">Task Name</label>
+            <input class="inputTag">
+        </div>
+        <div class="div">
+            <label class="label">Task Details</label>
+            <textarea style="height:85px;" class="inputTag"></textarea>
+        </div>
+        <div class="div">
+            <input class="inputSubmit" type="submit" value="Create">
+        </div>
+    </div>
+    <div class="taskassign" *ngIf="taskassign">
+        <h1 class="h1">Assign Task</h1>
+        <div class="div">
+            <label class="label">Developer ID</label>
+            <select class="inputTag">
+                <option>-Select-</option>
+            </select>
+        </div>
+        <div class="div">
+            <label class="label">Developer Name</label>
+            <select class="inputTag">
+                <option>-Select-</option>
+            </select>
+        </div>
+        <div class="div">
+            <label class="label">Task Name</label>
+            <select class="inputTag">
+                <option>-Select-</option>
+            </select>
+        </div>
+        <div class="div">
+            <input class="inputSubmit" type="submit" value="Assign">
+        </div>
+
+    </div>
+    <div class="taskreview" *ngIf="taskreview">
+        <h1 class="h1">Review Task</h1>
+        <div class="div">
+            <label class="label">Task Name</label>
+            <select class="inputTag">
+                <option>-Select-</option>
+            </select>
+        </div>
+        <div class="div">
+            <label class="label">Developer Name</label>
+            <select class="inputTag">
+                <option>-Select-</option>
+            </select>
+        </div>
+        <div class="div">
+            <label class="label">Task Status</label>
+            <select class="inputTag">
+                <option>-Select-</option>
+                <option>Completed</option>
+                <option>Not Completed</option>
+            </select>
+        </div>
+        <div class="div">
+            <input class="inputSubmit" type="submit" value="Review">
+        </div>
+
+    </div>
+</div>
+</div>
+</section>
+    

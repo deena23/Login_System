@@ -1,0 +1,20 @@
+<section class="main">
+    <a  href="" routerLink="/home" class="homebtn">Home</a>
+    <div class="logincrd">
+    <form  autocomplete="off">
+        <div class="usernameinput">
+            <h1 class="h1" style="margin-bottom:10px">Welcome {{username}}</h1>
+            <h3 class="h1">Create Project</h3>
+        </div>
+        <div class="usernameinput">
+            <label class="label">Project Name</label>
+            <input class="inputTag" type="text" placeholder="Project Name" name="project" [(ngModel)]="project" required>
+        </div>
+        <div class="usernameinput">
+            <input class="inputSubmit" value="Create" type="submit" >
+        </div>
+    </form>
+    
+    </div>
+    </section>
+    

@@ -1,0 +1,32 @@
+<section class="main">
+<div class="logincrd">
+<form (ngSubmit)="formcheck(loginform)" #loginform="ngForm" autocomplete="off">
+    <div class="usernameinput">
+        <h1 class="h1">Login</h1>
+    </div>
+    <div class="usernameinput">
+        <label class="label">Username</label>
+        <input class="inputTag" type="text" placeholder="Username" name="username" [(ngModel)]="username" #usernameerror="ngModel" required>
+        <span class="errormsg" *ngIf="usernameerror.touched && usernameerror.errors?.['required']"><p>Username Required</p></span>
+    </div>
+    <div class="usernameinput">
+        <label class="label">Password</label>
+        <input class="inputTag" type="password" placeholder="Password" name="password" [(ngModel)]="password" #passworderror="ngModel" required>
+        <span class="errormsg" *ngIf="passworderror.touched && passworderror.errors?.['required']"><p>Password Required</p></span>
+    </div>
+    <div class="usernameinput">
+        <label class="label">Role</label>
+        <select class="inputTag" name="role" [(ngModel)]="role" required>
+            <option [value]=''>-Select-</option>
+            <option value="admin">Admin</option>
+            <option>Manager</option>
+            <option>Developer</option>
+        </select>
+    </div>
+    <div class="usernameinput">
+        <input class="inputSubmit" value="submit" type="submit"  [disabled]="!loginform.valid">
+    </div>
+</form>
+
+</div>
+</section>
